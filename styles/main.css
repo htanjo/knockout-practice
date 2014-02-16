@@ -1,0 +1,11 @@
+li {
+  margin-top: 5px;
+}
+.form-control {
+  display: inline-block;
+  width: 40px;
+  text-align: center;
+}
+.selections a {
+  margin-right: 10px;
+}

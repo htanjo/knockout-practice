@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Knockout Practice</title>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/css/bootstrap.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Knockout Practice</h1>
+    <ul data-bind="foreach: list">
+      <li>
+        <input type="text" class="form-control" maxlength="1" data-bind="value: value">
+        <a href="javascript:void(0);" data-bind="click: $root.openUpdater">update</a>
+      </li>
+    </ul>
+    <hr />
+    <div id="updater" class="hide" data-bind="with: updater">
+      Wich number do you like?
+      <div class="selections" data-bind="foreach: values">
+        <a href="javascript:void(0);" data-bind="text: $data, click: $parent.update"></a>
+      </div>
+    </div>
+  </div>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/knockout/3.0.0/knockout-debug.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+</html>
